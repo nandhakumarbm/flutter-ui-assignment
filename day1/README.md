@@ -1,16 +1,36 @@
-# day1
+## 📘 What I Learned Today
 
-A new Flutter project.
+### 1. StatelessWidget vs StatefulWidget
 
-## Getting Started
+**StatelessWidget**
 
-This project is a starting point for a Flutter application.
+- Does not store any dynamic data.
+- UI does not change during runtime.
+- Used when content is static.
 
-A few resources to get you started if this is your first Flutter project:
+**StatefulWidget**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Can store and update data using `setState()`.
+- UI updates when internal state changes.
+- Ideal for interactive components.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 2. Importance of Folder Structure
+
+- Helps maintain clean, scalable, and readable code.
+- Separating colors, widgets, and screens makes the project easy to manage.
+
+### 3. Basic Layout: Row
+
+- Learned how `Row` aligns widgets horizontally.
+- Explored properties like `mainAxisAlignment` and `crossAxisAlignment`.
+
+## 📝 Summary
+
+Day 1 focused on understanding the fundamentals required to build a clean UI:
+
+- Created proper folder structure
+- Separated color constants
+- Understood Stateless and Stateful widgets
+- Practiced using `Row` for layout
+
+More UI components will be added in the upcoming days.
