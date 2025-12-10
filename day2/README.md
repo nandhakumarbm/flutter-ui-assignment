@@ -1,16 +1,13 @@
-# day2
+## 📘 What I Learned Today
 
-A new Flutter project.
+### 1. Row
 
-## Getting Started
+I learned how the `Row` widget arranges widgets horizontally. I experimented with different alignment options to control spacing and positioning inside the row.
 
-This project is a starting point for a Flutter application.
+### 2. Column
 
-A few resources to get you started if this is your first Flutter project:
+I explored the `Column` widget, which places widgets vertically. Understanding how `mainAxisAlignment` and `crossAxisAlignment` work helped me structure layouts more clearly.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 3. Center
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+I used the `Center` widget to position elements neatly in the middle of the screen. It makes alignment simple without needing extra padding or layout tricks.
