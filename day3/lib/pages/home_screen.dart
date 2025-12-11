@@ -1,8 +1,8 @@
-import 'package:day2/core/theme/app_colors.dart';
-import 'package:day2/widgets/calendar_detail.dart';
-import 'package:day2/widgets/top_bar.dart';
-import 'package:day2/widgets/trip_summary.dart';
-import 'package:day2/widgets/view_history.dart';
+import 'package:day3/core/theme/app_colors.dart';
+import 'package:day3/widgets/calendar_detail.dart';
+import 'package:day3/widgets/top_bar.dart';
+import 'package:day3/widgets/trip_summary.dart';
+import 'package:day3/widgets/view_history.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -21,7 +21,10 @@ class MainScreen extends StatelessWidget {
               const TopBar(),
               const SizedBox(height: 20),
               const Center(
-                child: Text('ROAD: TRIP', style: TextStyle(fontSize: 18)),
+                child: Text(
+                  'ROAD: TRIP',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                ),
               ),
               const SizedBox(height: 10),
               const Center(
@@ -42,9 +45,9 @@ class MainScreen extends StatelessWidget {
                   alignment: Alignment.center,
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
               const TripSummary(),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               const ViewHistory(),
             ],
           ),
