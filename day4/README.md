@@ -1,16 +1,21 @@
-# day4
+## What I Learned Today
 
-A new Flutter project.
+### BuildContext and Its Role
 
-## Getting Started
+I explored what `BuildContext` is in Flutter, why every widget’s `build` method receives it.
 
-This project is a starting point for a Flutter application.
+### Underscore Prefix in Class or Widget Names
 
-A few resources to get you started if this is your first Flutter project:
+I learned why we prefix a class or widget name with `_` in Flutter and Dart.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Routing Concepts
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+I went through Flutter’s routing flow, including how navigation works, when to use `Navigator.push`, `Navigator.pop`, named routes.
+
+---
+
+## What I Completed Today
+
+### UI Enhancements
+
+I performed UI refinements, especially adjusting font sizes to match the reference design more accurately. This helped improve visual alignment.
