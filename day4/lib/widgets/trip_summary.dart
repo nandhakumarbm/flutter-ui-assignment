@@ -211,7 +211,7 @@ class _TourDetailsSection extends StatelessWidget {
                 Text(
                   '23 - 30 May',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 12,
                     color: Colors.black.withOpacity(0.5),
                     fontWeight: FontWeight.w500,
                   ),
@@ -231,7 +231,7 @@ class _TourDetailsSection extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(height: 6),
+            const SizedBox(height: 15),
             Row(
               children: [
                 const Icon(Icons.star, color: Colors.amber, size: 20),
