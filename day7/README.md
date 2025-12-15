@@ -1,16 +1,14 @@
-# day7
+### What i did today
 
-A new Flutter project.
+### 1. Global Font Implementation
 
-## Getting Started
+The correct font, **Poppins**, was identified and set as the default text style for the entire application theme using the `google_fonts` package.
 
-This project is a starting point for a Flutter application.
+### What i learned today
 
-A few resources to get you started if this is your first Flutter project:
+Understanding the role of the main files and folders is essential for any Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **`pubspec.yaml`**: This file manages project settings. It is crucial for configuration, as it lists all required external packages (like fonts), declares assets (images), and specifies the Flutter SDK version.
+- **`pubspec.lock`**: This file is generated automatically. Its purpose is to track the exact version of every package used in the project. This ensures that all developers and build systems work with the same dependencies to prevent version conflicts.
+- **`android/` and `ios/`**: These folders hold the native files and configuration needed to build and run the app specifically on **Android** and **iOS** devices, respectively.
+- **`linux/`, `macos/`, and `windows/`**: These folders contain the necessary native boilerplate code and configuration to run the Flutter application as a standalone program on **desktop operating systems**.
