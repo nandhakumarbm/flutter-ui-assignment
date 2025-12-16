@@ -41,12 +41,12 @@ class _HeaderSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Row(
           children: [
             const ProgressRing(greenValue: 0.33, yellowValue: 0.33),
-            const SizedBox(width: 12),
+            const SizedBox(width: 15),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -82,51 +82,6 @@ class _HeaderSection extends StatelessWidget {
       ],
     );
   }
-}
-
-@override
-Widget build(BuildContext context) {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Row(
-        children: [
-          const SizedBox(width: 12),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Paris',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.primaryColor,
-                ),
-              ),
-              const SizedBox(height: 2),
-              Text(
-                '1200km • City',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: AppColors.secondaryColor,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-      Text(
-        '\$320.0',
-        style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-          color: AppColors.primaryColor,
-        ),
-      ),
-    ],
-  );
 }
 
 class _TimeRouteSection extends StatelessWidget {
