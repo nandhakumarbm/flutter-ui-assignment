@@ -49,31 +49,32 @@ class MainScreen extends StatelessWidget {
 
               Stack(
                 children: [
-                  Stack(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.asset(
-                          'assets/Images/car1.jpg',
-                          width: double.infinity,
-                          fit: BoxFit.cover,
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(5),
+                    child: Container(
+                      width: double.infinity,
+                      alignment: Alignment.center,
+                      child: FractionallySizedBox(
+                        widthFactor: 0.9,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(5),
+                          child: Container(
+                            color: AppColors.background,
+                            child: Image.asset(
+                              'assets/Images/car.jpg',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
                         ),
                       ),
-                      SizedBox(
-                        height: 80,
-                        width: 35,
-                        child: Container(
-                          color: AppColors.background.withOpacity(0.8),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
 
                   Positioned(
-                    bottom: 3,
+                    bottom: 5,
                     left: 0,
                     right: 0,
-                    child: TripProgressBar(progress: 0.7),
+                    child: TripProgressBar(progress: 0.75),
                   ),
                 ],
               ),
