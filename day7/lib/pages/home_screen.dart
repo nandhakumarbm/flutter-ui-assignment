@@ -1,11 +1,11 @@
-import '/widgets/car_progress_bar.dart';
+import 'package:flutter/material.dart';
 
 import '/core/theme/app_colors.dart';
-import '/widgets/calendar_detail.dart';
 import '/widgets/top_bar.dart';
+import '/widgets/calendar_detail.dart';
+import '/widgets/car_progress_bar.dart';
 import '/widgets/trip_summary.dart';
 import '/widgets/view_history.dart';
-import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -15,82 +15,78 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
+        child: SizedBox(
+          height: double.infinity, // ✅ take full screen height
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const TopBar(),
-              const SizedBox(height: 20),
-              const Center(
-                child: Text(
-                  'ROAD: TRIP',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.primaryColor,
-                  ),
-                ),
+              // ================= TOP =================
+              const Padding(
+                padding: EdgeInsets.only(top: 10, left: 15, right: 15),
+                child: TopBar(),
               ),
-              const SizedBox(height: 10),
-              const Center(
-                child: Text(
-                  'Munich to Paris',
-                  style: TextStyle(
-                    fontSize: 26,
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              const CalendarDetail(),
-              const SizedBox(height: 20),
 
-              Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(5),
-                    child: Container(
-                      width: double.infinity,
-                      alignment: Alignment.center,
-                      child: FractionallySizedBox(
-                        widthFactor: 0.9,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(5),
-                          child: Container(
-                            color: AppColors.background,
-                            child: Image.asset(
-                              'assets/Images/car.jpg',
-                              fit: BoxFit.contain,
-                            ),
+              // ================= BOTTOM =================
+              Expanded(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: ListView(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    shrinkWrap: true,
+                    children: [
+                      const SizedBox(height: 20),
+
+                      const Center(
+                        child: Text(
+                          'ROAD: TRIP',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: AppColors.primaryColor,
                           ),
                         ),
                       ),
-                    ),
-                  ),
 
-                  Positioned(
-                    bottom: 5,
-                    left: 0,
-                    right: 0,
-                    child: TripProgressBar(progress: 0.75),
+                      const SizedBox(height: 10),
+
+                      const Center(
+                        child: Text(
+                          'Munich to Paris',
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.primaryColor,
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(height: 20),
+                      const CalendarDetail(),
+                      const SizedBox(height: 20),
+
+                      Stack(
+                        children: [
+                          Image.asset(
+                            'assets/Images/car.jpg',
+                            fit: BoxFit.contain,
+                          ),
+                          const Positioned(
+                            bottom: 5,
+                            left: 0,
+                            right: 0,
+                            child: TripProgressBar(progress: 0.75),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 20),
+                      const TripSummary(),
+                      const SizedBox(height: 10),
+                      const ViewHistory(),
+                    ],
                   ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 1, // 1 px border
-                  ),
-                  borderRadius: BorderRadius.circular(30),
                 ),
-                child: TripSummary(),
               ),
-              const SizedBox(height: 10),
-              const ViewHistory(),
             ],
           ),
         ),
